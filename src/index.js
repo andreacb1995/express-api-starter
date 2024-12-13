@@ -11,6 +11,14 @@ const bcrypt = require('bcrypt');
 app.use(cors());
 app.use(bodyParser.json());  // Asegúrate de que el cuerpo de la solicitud esté parseado como JSON
 
+// Ruta para /api
+app.get('/api', (req, res) => {
+  res.json({
+      message: 'Bienvenido a la API',
+      status: 'success',
+  });
+});
+
 // Ruta para obtener todos los usuarios
 app.get('/usuarios', (req, res) => {
   const query = 'SELECT * FROM usuarios'; // Consulta para obtener todos los usuarios
@@ -99,7 +107,7 @@ app.post('/crearusuario', (req, res) => {
   });
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   /* eslint-disable no-console */
   console.log(`Listening: http://localhost:${port}`);
