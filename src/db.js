@@ -6,7 +6,7 @@ const connection = mysql.createConnection({
   host: 'localhost',  // Dirección del servidor MySQL (puede ser una IP o dominio)
   user: 'root', // Tu usuario de MySQL
   password: '', // Tu contraseña de MySQL
-  database: 'lempstack' // Nombre de la base de datos
+  database: 'apiexpress' // Nombre de la base de datos
 });
 
 // Conectar a la base de datos
