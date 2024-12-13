@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Usuarios</h1>
+    </header>
+
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" id="listarUsuarios" href="#">Listar Usuarios</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="addUsuario" href="#">Añadir Usuario</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" id="buscarId" href="#">Buscar por ID</a>
+        </li>
+      </ul>
+
+      <div id="tarjetasUsuarios" class="card-deck"></div>
+
+
+      <div id="CrearUsuario" class="formUsuario" style="display: none;">
+        <form id="formCrearUsuario">
+          <div class="form-group">
+            <label >Usuario</label>
+            <input type="text" class="form-control" id="username" placeholder="Nombre de usuario">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <input type="password" class="form-control" id="clave" placeholder="Password">
+          </div>
+          <button type="submit" name="guardar" class="btn btn-primary">Guardar</button>
+        </form>
+      </div>
+
+
+    <nav id="BuscarUsuario" class="navbar navbar-light bg-light" style="display: none;">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" id= "usuarioId" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-primary my-2 my-sm-0" type="submit" name="buscar">Buscar</button>
+      </form>
+    </nav>
+
+    <!-- Aquí se mostrarán los datos o el mensaje de error -->
+    <div id="resultadoBusqueda" style="margin-top: 20px; display: none"></div>
+    <div class="card" id="mostrarusuario" style="display: none"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script> <!-- JavaScript para manejar la lógica del formulario y el modal -->
+
+
+</body>
+</html>
